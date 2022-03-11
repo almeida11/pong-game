@@ -13,7 +13,7 @@ class PongPaddle(Widget):
     score = NumericProperty(0)
 
     def bounce_ball(self, ball):
-        if self.collide_widget(ball):
+        if self.collide_widget(ball): 
             vx,vy = ball.velocity
             offset = (ball.center_y - self.center_y) / (self.height / 2)
             bounced = Vector(-1 * vx,vy)
@@ -28,7 +28,7 @@ class PongBall(Widget):
 
     def move(self):
         self.pos = Vector(*self.velocity) + self.pos
-
+ 
 #game window
 class PongGame(Widget):
     ball = ObjectProperty(None)
